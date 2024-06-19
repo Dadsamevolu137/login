@@ -50,17 +50,3 @@
 </body>
 </html>
 <?php
-        if(isset($nome) || isset($email) || isset($telefone) || isset($cpf) || isset($cep) || isset($genero)){
-
-        include_once('ConfigM.php');
-        $nome = $_POST['Nome'];
-        $email = $_POST['Email'];
-        $telefone = $_POST['Telefone'];
-        $cpf = $_POST['Cpf'];
-        $cep = $_POST['Cep'];
-        $genero = $_POST['Genero']; 
-
-        $resulta = mysqli_query($conexao, "INSERT INTO login(Nome,Email,Telefone,Cpf,Cep,Genero)
-        VALUES('$nome','$email','$telefone','$cpf','$cep','$genero')");
-    }
-?>
